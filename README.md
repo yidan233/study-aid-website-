@@ -9,7 +9,8 @@ Accessing the Website: Simply run the main.py file to launch the Study Aid Websi
 ![image](https://github.com/yidan233/study-aid-website-/assets/160430396/c248426c-0276-4fbd-aec3-34210a975215)
 
 User Authentication: Upon accessing the website, you'll be directed to the login page. If you're new, sign up for an account to get started.
-![image](https://github.com/yidan233/study-aid-website-/assets/160430396/a9185e43-ed1d-47fb-9ed2-623f464b0755)
+![image](https://github.com/yidan233/study-aid-website-/assets/160430396/f1c53c63-ceb1-4583-9324-50b663e19c61)
+
 
 Home Page: After successful login/signup, you'll be directed to the home page. Here, you can access the customizable to-do list and the lo-fi study music player.
 To-Do List: Use the to-do list to organize your study tasks efficiently. Add tasks, set priorities, and track your progress to stay on top of your workload.
