@@ -1,0 +1,59 @@
+
+<!-- to access the home page, we need to log in fist-->
+<!--use the template from base -->
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %} 
+{% block content %}
+  <div class="container">
+    
+    <!-- the music player -->
+    <div class="music-player">
+      <p>wait until the camera window occurs, press q to quit when focusing on the window</p>
+      <form id="startVolumeControlForm" action="{{ url_for('auth.start_volume_control') }}" method="post">
+          <button type="submit">Start Volume Control</button>
+      </form>
+
+
+      <nav>
+        <div class="circle">
+          <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="circle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <img src="{{ url_for('static', filename='image/OIP.jpg') }}" class="song-img">
+
+      <h1>study lofi</h1>
+      <br>
+      <!-- load music source -->
+      <audio controls id="song">
+        <source src="{{url_for('static', filename = 'music/Colorful-Flowers(chosic.com).mp3')}}" type="audio/mpeg"> 
+        <source src="{{url_for('static', filename = 'music/Fallen-chosic.com_.mp3')}}" type="audio/mpeg"> 
+        <source src="{{url_for('static', filename = 'music/Ghostrifter-Official-Devyzed-Downtown-Glow(chosic.com).mp3')}}" type="audio/mpeg"> 
+        <source src="{{url_for('static', filename = 'music/Memories-of-Spring(chosic.com).mp3')}}" type="audio/mpeg"> 
+        <source src="{{url_for('static', filename = 'music/Missing-You(chosic.com).mp3')}}" type="audio/mpeg"> 
+
+      </audio>
+      <input type="range" value="0" id="progress">
+      <div class="controls">
+        <div onclick = previousSong()><i class="fa-solid fa-backward" ></i></div>
+        <div onclick = playPause()><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        <div onclick = nextSong()><i class="fa-solid fa-forward" ></i></div>
+      </div>
+    </div>
+  
+    <!-- to do list-->
+    <div class="todo-app">
+      <h2> TO-DO List</h2>
+      <div class="row">
+        <input type=" text" id = "input-box" placeholder="Add your notes">
+        <button onclick = "addTask()">add</button>
+      </div>
+      <ul id = "list-container">
+    </ul>
+    </div>
+
+  </div>
+  <script src = "{{url_for('static', filename = 'script.js')}}"></script>
+{% endblock %}
